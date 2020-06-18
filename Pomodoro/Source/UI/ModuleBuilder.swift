@@ -17,12 +17,12 @@ class ModuleBuilder {
         return view
     }
     
-//    static func createNextPageModule() -> UIViewController {
-//        let view = TaskViewController.loadFromNib()
-//        let presenter = TaskPresenter(view: view)
-//        view.presenter = presenter
-//        return view
-//    }
+    static func createTaskModule() -> UIViewController {
+        let view = TaskViewController.loadFromNib()
+        let presenter = TaskPresenter(view: view)
+        view.presenter = presenter
+        return view
+    }
 }
 
 // MARK: This is utility extension for handy instantiating controller

@@ -9,13 +9,19 @@
 import Foundation
 
 protocol HomePresenterProtocol : AnyObject {
-
+    func didTapGuestButton()
 }
 
-class HomePresenter: HomePresenterProtocol {
-    weak var view: HomeViewController?
+class HomePresenter {
+    weak var view: HomeViewController!
     
     required init(view: HomeViewController){
         self.view = view
+    }
+}
+extension HomePresenter: HomePresenterProtocol {
+    func didTapGuestButton() {
+        let nextModulePage = ModuleBuilder.createTaskModule()
+        view.goToScreen(nextModulePage)
     }
 }
