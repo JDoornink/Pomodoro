@@ -19,7 +19,7 @@ class TaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         taskView.backgroundColor = .systemGray2
-
+        presenter.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 }
