@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        testsCollectionRef = store.collection("tests")
+        testsCollectionRef = store.collection("tasks")
     }
     
     override func viewWillAppear(_ animated: Bool) {
