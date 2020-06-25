@@ -24,11 +24,9 @@ class TaskViewController: UIViewController {
         super.viewDidLoad()
         taskView.backgroundColor = .systemGray2
         testsCollectionRef = store.collection("tasks")
-
-        // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         testsCollectionRef.getDocuments { (snapshot, error) in
             if let err = error {
                 debugPrint("Error fetchng docs: \(err)")
@@ -37,7 +35,7 @@ class TaskViewController: UIViewController {
                     //var id = document.get("id") as! String
                     let taskText = document.get("text") as! String
                     let completed = document.get("completed")as? Bool
-                    let task = TaskObject(id: "123", text: taskText, completed: completed!)
+                    let task = TaskObject(text: taskText, completed: completed!)
                     self.tasks.append(task)
                 }
             }

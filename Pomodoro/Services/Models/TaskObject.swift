@@ -8,26 +8,24 @@
 
 import Foundation
 
-struct TaskObject: Codable {
-    var id: String
-    var text: String
-    var completed: Bool
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case text
-        case completed
-    }
-}
-    
-//struct TaskObject {
-//var id: String
-//var text: String
-//var completed: Bool
+//struct TaskObject: Codable {
+//    var id: String
+//    var text: String
+//    var completed: Bool
 //
-//    init (id: String, text: String, completed: Bool) {
-//        self.id = id
-//        self.text = text
-//        self.completed = completed
+//    enum CodingKeys: String, CodingKey {
+//        case id
+//        case text
+//        case completed
 //    }
 //}
+    
+struct TaskObject {
+var text: String
+var completed: Bool
+
+    init (text: String, completed: Bool) {
+        self.text = text
+        self.completed = completed
+    }
+}
